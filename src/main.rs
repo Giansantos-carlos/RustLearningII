@@ -11,7 +11,7 @@ fn main() {
     name = "Olga";
     println!("name: {}", name);
     */
-
+    /* 
     let mut numberOne = String::new();
     io::stdin().read_line(&mut numberOne).expect("Error reading input numberOne");
 
@@ -22,7 +22,20 @@ fn main() {
         print!("numberOne {} is must of numberTwo {}", numberOne, numberTwo);
     } else {
         print!("numberTwo {} is must of numberOne {}", numberTwo, numberOne);
+    } 
+    */
+
+    let mut sum = 0;
+    let mut value_input = String::new();
+    io::stdin().read_line(&mut value_input).expect("Error reading input value_input");
+    let mut value_i32 =  convert_to_integer(&value_input);
+    while value_i32!= 0 {
+        let mut r = value_i32 %10;
+        sum = sum + r;
+        value_i32 = value_i32 / 10;
     }
+
+    print!("the sum the digits is {}", sum)
 
 }
 
