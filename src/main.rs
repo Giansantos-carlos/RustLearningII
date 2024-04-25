@@ -24,7 +24,7 @@ fn main() {
         print!("numberTwo {} is must of numberOne {}", numberTwo, numberOne);
     } 
     */
-
+    /* 
     let mut sum = 0;
     let mut value_input = String::new();
     io::stdin().read_line(&mut value_input).expect("Error reading input value_input");
@@ -36,6 +36,25 @@ fn main() {
     }
 
     print!("the sum the digits is {}", sum)
+    */
+
+    let mut averages = String::new();
+    io::stdin().read_line(&mut averages).expect("Error reading input averages");
+    let mut sum_rec = 0;
+    let mut i = 0;
+    while convert_to_integer(&averages) > i {
+        let mut avg_student = String::new();
+        io::stdin().read_line(&mut avg_student).expect("Error reading input averages");
+        i += 1;
+        if convert_to_integer(&avg_student) >= 3 && convert_to_integer(&avg_student) < 6 {
+            sum_rec += 1;
+        }
+
+        print!("the number of students in recovery is {}", sum_rec)
+
+    }
+
+
 
 }
 
