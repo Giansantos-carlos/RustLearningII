@@ -5,6 +5,20 @@ fn convert_to_integer(data: & String) ->i32 {
     data
 }
 
+fn biggest_divider(numberA: i32, numberB: i32) -> i32 {
+    let mut numberA = numberA;
+    let mut numberB = numberB;
+
+    while numberB!= 0 {
+        let remainder = numberA % numberB;
+        numberA = numberB;
+        numberB = remainder;
+    }
+
+    numberA
+}
+
+
 fn main() {
     /* 
     let mut name = "Gain"; // mut is mutable variable
@@ -38,7 +52,7 @@ fn main() {
     print!("the sum the digits is {}", sum)
     */
 
-    let mut averages = String::new();
+    /*let mut averages = String::new();
     io::stdin().read_line(&mut averages).expect("Error reading input averages");
     let mut sum_rec = 0;
     let mut i = 0;
@@ -52,8 +66,9 @@ fn main() {
 
         print!("the number of students in recovery is {}", sum_rec)
 
-    }
-
+    }*/
+    let mut result = biggest_divider(15, 40);
+    print!(" the biggest divide between 15 and 40 is: {}", result)
 
 
 }
